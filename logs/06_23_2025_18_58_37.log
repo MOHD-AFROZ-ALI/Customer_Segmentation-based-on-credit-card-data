@@ -1,0 +1,58 @@
+[ 2025-06-23 18:58:38,585 ] _internal.py:97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-06-23 18:58:38,591 ] _internal.py:97 werkzeug - INFO -  * Debugger PIN: 131-102-869
+[ 2025-06-23 18:59:18,066 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:18] "GET / HTTP/1.1" 200 -
+[ 2025-06-23 18:59:18,212 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:18] "GET /static/css/style.css HTTP/1.1" 200 -
+[ 2025-06-23 18:59:18,258 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:18] "GET /static/js/main.js HTTP/1.1" 200 -
+[ 2025-06-23 18:59:18,441 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-06-23 18:59:23,027 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:23] "[31m[1mPOST /run_training HTTP/1.1[0m" 405 -
+[ 2025-06-23 18:59:45,430 ] app.py:181 root - INFO - File temporarily saved for validation: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\67415482-1a77-4e41-a69e-e8034b4a096c_Customer Data.csv
+[ 2025-06-23 18:59:45,436 ] app.py:225 root - INFO - Initiating Batch Prediction Pipeline...
+[ 2025-06-23 18:59:45,437 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-23 18:59:45,437 ] batch_prediction.py:124 root - INFO - Starting batch prediction pipeline...
+[ 2025-06-23 18:59:45,440 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\67415482-1a77-4e41-a69e-e8034b4a096c_Customer Data.csv
+[ 2025-06-23 18:59:45,440 ] batch_prediction.py:127 root - INFO - Loaded input data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\67415482-1a77-4e41-a69e-e8034b4a096c_Customer Data.csv for batch prediction. Shape: (9, 18)
+[ 2025-06-23 18:59:45,440 ] batch_prediction.py:29 root - INFO - Starting batch prediction...
+[ 2025-06-23 18:59:45,453 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-23 18:59:45,453 ] batch_prediction.py:36 root - INFO - Preprocessor loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-23 18:59:45,473 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-23 18:59:45,473 ] batch_prediction.py:43 root - INFO - Model loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-23 18:59:45,474 ] batch_prediction.py:56 root - INFO - Dropped columns for prediction: ['CUST_ID']
+[ 2025-06-23 18:59:45,478 ] batch_prediction.py:84 root - INFO - Input data transformed for prediction.
+[ 2025-06-23 18:59:45,567 ] batch_prediction.py:100 root - INFO - Predictions made.
+[ 2025-06-23 18:59:45,568 ] batch_prediction.py:107 root - INFO - Cluster labels added to the output DataFrame.
+[ 2025-06-23 18:59:45,571 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 18:59:45,571 ] batch_prediction.py:132 root - INFO - Batch prediction results saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 18:59:45,571 ] batch_prediction.py:140 root - INFO - Batch prediction artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=9, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-23 18:59:45,572 ] app.py:330 root - INFO - Batch prediction successful.
+[ 2025-06-23 18:59:45,584 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 18:59:45,604 ] app.py:355 root - INFO - Cleaned up temporary uploaded file: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\67415482-1a77-4e41-a69e-e8034b4a096c_Customer Data.csv
+[ 2025-06-23 18:59:45,604 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 18:59:45] "POST /upload HTTP/1.1" 200 -
+[ 2025-06-23 19:01:45,455 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:01:45] "[33mGET /upload/1.1 HTTP/1.1[0m" 404 -
+[ 2025-06-23 19:01:59,800 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:01:59] "[33mGET /run_pipeline HTTP/1.1[0m" 404 -
+[ 2025-06-23 19:04:13,018 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:04:13] "GET / HTTP/1.1" 200 -
+[ 2025-06-23 19:04:13,040 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:04:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+[ 2025-06-23 19:04:13,041 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:04:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+[ 2025-06-23 19:04:59,995 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:04:59] "[33mGET /uploads HTTP/1.1[0m" 404 -
+[ 2025-06-23 19:05:04,268 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:05:04] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+[ 2025-06-23 19:05:14,683 ] app.py:181 root - INFO - File temporarily saved for validation: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\b5565e46-6e09-4690-8a21-fc73f6863dc0_Customer Data.csv
+[ 2025-06-23 19:05:14,688 ] app.py:225 root - INFO - Initiating Batch Prediction Pipeline...
+[ 2025-06-23 19:05:14,689 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-23 19:05:14,689 ] batch_prediction.py:124 root - INFO - Starting batch prediction pipeline...
+[ 2025-06-23 19:05:14,692 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\b5565e46-6e09-4690-8a21-fc73f6863dc0_Customer Data.csv
+[ 2025-06-23 19:05:14,692 ] batch_prediction.py:127 root - INFO - Loaded input data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\b5565e46-6e09-4690-8a21-fc73f6863dc0_Customer Data.csv for batch prediction. Shape: (9, 18)
+[ 2025-06-23 19:05:14,692 ] batch_prediction.py:29 root - INFO - Starting batch prediction...
+[ 2025-06-23 19:05:14,693 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-23 19:05:14,693 ] batch_prediction.py:36 root - INFO - Preprocessor loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-23 19:05:14,693 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-23 19:05:14,694 ] batch_prediction.py:43 root - INFO - Model loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-23 19:05:14,694 ] batch_prediction.py:56 root - INFO - Dropped columns for prediction: ['CUST_ID']
+[ 2025-06-23 19:05:14,698 ] batch_prediction.py:84 root - INFO - Input data transformed for prediction.
+[ 2025-06-23 19:05:14,699 ] batch_prediction.py:100 root - INFO - Predictions made.
+[ 2025-06-23 19:05:14,699 ] batch_prediction.py:107 root - INFO - Cluster labels added to the output DataFrame.
+[ 2025-06-23 19:05:14,702 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 19:05:14,702 ] batch_prediction.py:132 root - INFO - Batch prediction results saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 19:05:14,702 ] batch_prediction.py:140 root - INFO - Batch prediction artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=9, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-23 19:05:14,702 ] app.py:330 root - INFO - Batch prediction successful.
+[ 2025-06-23 19:05:14,706 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-23 19:05:14,720 ] app.py:355 root - INFO - Cleaned up temporary uploaded file: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\b5565e46-6e09-4690-8a21-fc73f6863dc0_Customer Data.csv
+[ 2025-06-23 19:05:14,720 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [23/Jun/2025 19:05:14] "POST /upload HTTP/1.1" 200 -

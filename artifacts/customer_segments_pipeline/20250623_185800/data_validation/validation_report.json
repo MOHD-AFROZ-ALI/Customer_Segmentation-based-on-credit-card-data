@@ -1,0 +1,111 @@
+{
+    "schema_validation": {
+        "overall_status": "SUCCESS",
+        "checks": [
+            {
+                "check": "Column Presence",
+                "status": "SUCCESS",
+                "message": "All expected columns present."
+            },
+            {
+                "check": "Data Type - CUST_ID",
+                "status": "SUCCESS"
+            }
+        ]
+    },
+    "null_validation": {
+        "overall_status": "SUCCESS",
+        "checks": [
+            {
+                "check": "Null Values - CUST_ID",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - BALANCE",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - BALANCE_FREQUENCY",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - PURCHASES",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - ONEOFF_PURCHASES",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - INSTALLMENTS_PURCHASES",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - CASH_ADVANCE",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - PURCHASES_FREQUENCY",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - ONEOFF_PURCHASES_FREQUENCY",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - PURCHASES_INSTALLMENTS_FREQUENCY",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - CASH_ADVANCE_FREQUENCY",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - CASH_ADVANCE_TRX",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - PURCHASES_TRX",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - CREDIT_LIMIT",
+                "status": "SUCCESS",
+                "message": "0.01% nulls."
+            },
+            {
+                "check": "Null Values - PAYMENTS",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - MINIMUM_PAYMENTS",
+                "status": "SUCCESS",
+                "message": "3.50% nulls."
+            },
+            {
+                "check": "Null Values - PRC_FULL_PAYMENT",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            },
+            {
+                "check": "Null Values - TENURE",
+                "status": "SUCCESS",
+                "message": "0.00% nulls."
+            }
+        ]
+    }
+}
