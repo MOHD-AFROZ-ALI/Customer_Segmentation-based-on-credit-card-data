@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="customer_segments_productionjules",
+    name="customer_segments_production",
     version="0.1.0",
     description="Customer Segmentation Project with clustering and Flask UI",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="MOHD AFROZ ALI",
+    author_email="afrozali3001.aa@gmail.com",
     packages=find_packages(include=["custsegments", "custsegments.*"]),
     install_requires=[
         "pandas",
