@@ -43,27 +43,3 @@
 
 </div>
 {% endblock %}
-
-{% block body_scripts %}
-<script>
-// This script block is now primarily for passing initial data from Flask to JavaScript,
-// if needed for immediate rendering on page load before static/js/main.js might fully take over
-// or for data that main.js expects to be globally available.
-
-// static/js/main.js handles:
-// - File input label updates.
-// - AJAX form submission for 'uploadForm'.
-// - Initial chart rendering if global variables like 'initialVisualsData' are set.
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Make data from Flask available globally for static/js/main.js to use for initial chart rendering.
-    // The actual rendering calls are within main.js's DOMContentLoaded listener.
-    // visuals_data_json is passed from app.py's index route.
-    window.initialVisualsData = {% if visuals_data_json is defined %}{{ visuals_data_json|tojson|safe }}{% else %}{}{% endif %};
-
-    // If you have other initial data for scatter plots or radar charts, define them similarly:
-    // window.initialScatterData = {{ scatter_data_json|default('{}')|tojson|safe }};
-    // window.initialRadarData = {{ radar_data_json|default('{}')|tojson|safe }};
-});
-</script>
-{% endblock %}
