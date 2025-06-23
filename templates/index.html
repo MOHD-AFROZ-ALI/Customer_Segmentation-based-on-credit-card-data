@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Make data from Flask available globally for static/js/main.js to use for initial chart rendering.
     // The actual rendering calls are within main.js's DOMContentLoaded listener.
     // visuals_data_json is passed from app.py's index route.
-    window.initialVisualsData = {{ visuals_data_json|default('{}')|tojson|safe }};
+    window.initialVisualsData = {% if visuals_data_json is defined %}{{ visuals_data_json|tojson|safe }}{% else %}{}{% endif %};
 
     // If you have other initial data for scatter plots or radar charts, define them similarly:
     // window.initialScatterData = {{ scatter_data_json|default('{}')|tojson|safe }};
