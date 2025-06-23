@@ -1,0 +1,167 @@
+[ 2025-06-22 19:31:34,849 ] main.py:76 root - INFO - --- Main: Starting New Training Pipeline Run: 20250622_193133 ---
+[ 2025-06-22 19:31:34,851 ] main.py:42 root - INFO - Data file already exists at C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\customer_data\credit_card_data.csv.
+[ 2025-06-22 19:31:34,851 ] training_pipeline.py:48 root - INFO - Pipeline artifacts root directory set to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133
+[ 2025-06-22 19:31:34,851 ] training_pipeline.py:185 root - INFO - Training pipeline started for run: 20250622_193133
+[ 2025-06-22 19:31:34,854 ] training_pipeline.py:113 root - INFO - Starting Data Ingestion stage in pipeline...
+[ 2025-06-22 19:31:34,855 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion
+[ 2025-06-22 19:31:34,856 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion
+[ 2025-06-22 19:31:34,856 ] data_ingestion.py:89 root - INFO - Starting data ingestion process.
+[ 2025-06-22 19:31:34,856 ] data_ingestion.py:39 root - INFO - Attempting to access raw data from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\customer_data\credit_card_data.csv
+[ 2025-06-22 19:31:34,859 ] data_ingestion.py:72 root - INFO - Copied raw data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\customer_data\credit_card_data.csv to ingested data path: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion\full_data.csv
+[ 2025-06-22 19:31:34,859 ] data_ingestion.py:101 root - INFO - Data ingestion artifact: DataIngestionArtifact(ingested_data_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/data_ingestion/full_data.csv'), is_ingested=True, message='Data ingestion completed successfully. Full dataset prepared.')
+[ 2025-06-22 19:31:34,859 ] training_pipeline.py:116 root - INFO - Data Ingestion stage completed.
+[ 2025-06-22 19:31:34,859 ] training_pipeline.py:120 root - INFO - Starting Data Validation stage in pipeline...
+[ 2025-06-22 19:31:34,860 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation
+[ 2025-06-22 19:31:34,860 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation
+[ 2025-06-22 19:31:34,860 ] data_validation.py:131 root - INFO - Starting data validation process.
+[ 2025-06-22 19:31:34,896 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion\full_data.csv
+[ 2025-06-22 19:31:34,897 ] data_validation.py:139 root - INFO - Dataframe loaded for validation. Shape: (8950, 18)
+[ 2025-06-22 19:31:34,897 ] data_validation.py:35 root - INFO - Starting schema validation.
+[ 2025-06-22 19:31:34,899 ] utils.py:118 root - INFO - JSON file saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation\validation_report.json
+[ 2025-06-22 19:31:34,899 ] data_validation.py:76 root - INFO - Schema validation report saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation\validation_report.json
+[ 2025-06-22 19:31:34,899 ] data_validation.py:95 root - INFO - Starting null value validation.
+[ 2025-06-22 19:31:34,901 ] utils.py:138 root - INFO - JSON file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation\validation_report.json
+[ 2025-06-22 19:31:34,906 ] utils.py:118 root - INFO - JSON file saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation\validation_report.json
+[ 2025-06-22 19:31:34,906 ] data_validation.py:121 root - INFO - Null value validation report updated at C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_validation\validation_report.json
+[ 2025-06-22 19:31:34,906 ] data_validation.py:157 root - INFO - Data validation completed.
+[ 2025-06-22 19:31:34,907 ] data_validation.py:173 root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, validated_data_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/data_ingestion/full_data.csv'), validation_report_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/data_validation/validation_report.json'), message='Data validation completed.')
+[ 2025-06-22 19:31:34,907 ] training_pipeline.py:128 root - INFO - Data Validation stage completed.
+[ 2025-06-22 19:31:34,907 ] training_pipeline.py:132 root - INFO - Starting Data Transformation stage in pipeline...
+[ 2025-06-22 19:31:34,908 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation
+[ 2025-06-22 19:31:34,909 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation
+[ 2025-06-22 19:31:34,910 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation
+[ 2025-06-22 19:31:34,910 ] data_transformation.py:61 root - INFO - Starting data transformation process.
+[ 2025-06-22 19:31:34,929 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion\full_data.csv
+[ 2025-06-22 19:31:34,929 ] data_transformation.py:65 root - INFO - Loaded validated data from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_ingestion\full_data.csv
+[ 2025-06-22 19:31:34,932 ] data_transformation.py:72 root - INFO - Dropped column: CUST_ID
+[ 2025-06-22 19:31:34,932 ] data_transformation.py:80 root - INFO - Numerical features to be transformed: ['BALANCE', 'BALANCE_FREQUENCY', 'PURCHASES', 'ONEOFF_PURCHASES', 'INSTALLMENTS_PURCHASES', 'CASH_ADVANCE', 'PURCHASES_FREQUENCY', 'ONEOFF_PURCHASES_FREQUENCY', 'PURCHASES_INSTALLMENTS_FREQUENCY', 'CASH_ADVANCE_FREQUENCY', 'CASH_ADVANCE_TRX', 'PURCHASES_TRX', 'CREDIT_LIMIT', 'PAYMENTS', 'MINIMUM_PAYMENTS', 'PRC_FULL_PAYMENT', 'TENURE']
+[ 2025-06-22 19:31:34,932 ] data_transformation.py:37 root - INFO - Numerical preprocessing pipeline created with Median Imputer and StandardScaler.
+[ 2025-06-22 19:31:34,956 ] utils.py:75 root - INFO - Object saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\preprocessor.pkl
+[ 2025-06-22 19:31:34,956 ] data_transformation.py:108 root - INFO - Preprocessor object saved to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\preprocessor.pkl
+[ 2025-06-22 19:31:35,172 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:35,172 ] data_transformation.py:113 root - INFO - Transformed data saved to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:35,172 ] data_transformation.py:122 root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_data_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/data_transformation/data_transformed.csv'), preprocessor_object_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/data_transformation/preprocessor.pkl'), is_transformed=True, message='Data transformation completed successfully.')
+[ 2025-06-22 19:31:35,173 ] training_pipeline.py:140 root - INFO - Data Transformation stage completed.
+[ 2025-06-22 19:31:35,173 ] training_pipeline.py:144 root - INFO - Starting EDA Analysis stage in pipeline...
+[ 2025-06-22 19:31:35,174 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots
+[ 2025-06-22 19:31:35,175 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis
+[ 2025-06-22 19:31:35,175 ] eda_analysis.py:140 root - INFO - Starting EDA analysis process.
+[ 2025-06-22 19:31:35,225 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:35,225 ] eda_analysis.py:155 root - INFO - Loaded transformed data for EDA from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:35,225 ] eda_analysis.py:32 root - INFO - Generating descriptive statistics...
+[ 2025-06-22 19:31:35,266 ] eda_analysis.py:34 root - INFO - Descriptive statistics generated:
+                                   count          mean       std       min       25%       50%       75%        max
+BALANCE                           8950.0  8.891708e-17  1.000056 -0.751640 -0.690008 -0.332029  0.235256   8.397489
+BALANCE_FREQUENCY                 8950.0  2.095903e-16  1.000056 -3.703271  0.049045  0.518084  0.518084   0.518084
+PURCHASES                         8950.0  0.000000e+00  1.000056 -0.469552 -0.451001 -0.300454  0.050047  22.483510
+ONEOFF_PURCHASES                  8950.0  4.445854e-17  1.000056 -0.356934 -0.356934 -0.334040 -0.009057  24.201066
+INSTALLMENTS_PURCHASES            8950.0  3.810732e-17  1.000056 -0.454576 -0.454576 -0.356156  0.063663  24.426889
+CASH_ADVANCE                      8950.0  1.079707e-16  1.000056 -0.466786 -0.466786 -0.466786  0.064352  22.011117
+PURCHASES_FREQUENCY               8950.0 -2.318195e-16  1.000056 -1.221758 -1.014125  0.024043  1.062211   1.269843
+ONEOFF_PURCHASES_FREQUENCY        8950.0 -8.891708e-17  1.000056 -0.678661 -0.678661 -0.399319  0.326973   2.673451
+PURCHASES_INSTALLMENTS_FREQUENCY  8950.0  1.063829e-16  1.000056 -0.916995 -0.916995 -0.497629  0.970151   1.599199
+CASH_ADVANCE_FREQUENCY            8950.0  5.398537e-17  1.000056 -0.675349 -0.675349 -0.675349  0.435149   6.820521
+CASH_ADVANCE_TRX                  8950.0  1.746585e-17  1.000056 -0.476070 -0.476070 -0.476070  0.110074  17.547848
+PURCHASES_TRX                     8950.0 -1.270244e-17  1.000056 -0.591796 -0.551565 -0.310177  0.092136  13.811014
+CREDIT_LIMIT                      8950.0  1.270244e-16  1.000056 -1.221479 -0.795473 -0.410693  0.551257   7.010063
+PAYMENTS                          8950.0 -2.540488e-17  1.000056 -0.598688 -0.466291 -0.302685  0.058030  16.922279
+MINIMUM_PAYMENTS                  8950.0  6.986342e-17  1.000056 -0.362199 -0.288961 -0.228307 -0.024090  32.392735
+PRC_FULL_PAYMENT                  8950.0  3.175610e-18  1.000056 -0.525551 -0.525551 -0.525551 -0.037122   2.893453
+TENURE                            8950.0  1.778342e-16  1.000056 -4.122768  0.360680  0.360680  0.360680   0.360680
+[ 2025-06-22 19:31:35,266 ] eda_analysis.py:43 root - INFO - Generating visualizations...
+[ 2025-06-22 19:31:35,792 ] eda_analysis.py:54 root - INFO - Saved histogram for BALANCE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\BALANCE_histogram.png
+[ 2025-06-22 19:31:36,242 ] eda_analysis.py:54 root - INFO - Saved histogram for BALANCE_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\BALANCE_FREQUENCY_histogram.png
+[ 2025-06-22 19:31:36,709 ] eda_analysis.py:54 root - INFO - Saved histogram for PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_histogram.png
+[ 2025-06-22 19:31:37,138 ] eda_analysis.py:54 root - INFO - Saved histogram for ONEOFF_PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\ONEOFF_PURCHASES_histogram.png
+[ 2025-06-22 19:31:37,626 ] eda_analysis.py:54 root - INFO - Saved histogram for INSTALLMENTS_PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\INSTALLMENTS_PURCHASES_histogram.png
+[ 2025-06-22 19:31:38,048 ] eda_analysis.py:54 root - INFO - Saved histogram for CASH_ADVANCE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_histogram.png
+[ 2025-06-22 19:31:38,403 ] eda_analysis.py:54 root - INFO - Saved histogram for PURCHASES_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_FREQUENCY_histogram.png
+[ 2025-06-22 19:31:38,776 ] eda_analysis.py:54 root - INFO - Saved histogram for ONEOFF_PURCHASES_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\ONEOFF_PURCHASES_FREQUENCY_histogram.png
+[ 2025-06-22 19:31:39,157 ] eda_analysis.py:54 root - INFO - Saved histogram for PURCHASES_INSTALLMENTS_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_INSTALLMENTS_FREQUENCY_histogram.png
+[ 2025-06-22 19:31:39,588 ] eda_analysis.py:54 root - INFO - Saved histogram for CASH_ADVANCE_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_FREQUENCY_histogram.png
+[ 2025-06-22 19:31:40,021 ] eda_analysis.py:54 root - INFO - Saved histogram for CASH_ADVANCE_TRX to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_TRX_histogram.png
+[ 2025-06-22 19:31:40,464 ] eda_analysis.py:54 root - INFO - Saved histogram for PURCHASES_TRX to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_TRX_histogram.png
+[ 2025-06-22 19:31:40,846 ] eda_analysis.py:54 root - INFO - Saved histogram for CREDIT_LIMIT to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CREDIT_LIMIT_histogram.png
+[ 2025-06-22 19:31:41,413 ] eda_analysis.py:54 root - INFO - Saved histogram for PAYMENTS to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PAYMENTS_histogram.png
+[ 2025-06-22 19:31:41,830 ] eda_analysis.py:54 root - INFO - Saved histogram for MINIMUM_PAYMENTS to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\MINIMUM_PAYMENTS_histogram.png
+[ 2025-06-22 19:31:42,240 ] eda_analysis.py:54 root - INFO - Saved histogram for PRC_FULL_PAYMENT to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PRC_FULL_PAYMENT_histogram.png
+[ 2025-06-22 19:31:42,731 ] eda_analysis.py:54 root - INFO - Saved histogram for TENURE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\TENURE_histogram.png
+[ 2025-06-22 19:31:42,962 ] eda_analysis.py:64 root - INFO - Saved box plot for BALANCE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\BALANCE_boxplot.png
+[ 2025-06-22 19:31:43,190 ] eda_analysis.py:64 root - INFO - Saved box plot for BALANCE_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\BALANCE_FREQUENCY_boxplot.png
+[ 2025-06-22 19:31:43,422 ] eda_analysis.py:64 root - INFO - Saved box plot for PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_boxplot.png
+[ 2025-06-22 19:31:43,652 ] eda_analysis.py:64 root - INFO - Saved box plot for ONEOFF_PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\ONEOFF_PURCHASES_boxplot.png
+[ 2025-06-22 19:31:43,890 ] eda_analysis.py:64 root - INFO - Saved box plot for INSTALLMENTS_PURCHASES to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\INSTALLMENTS_PURCHASES_boxplot.png
+[ 2025-06-22 19:31:44,118 ] eda_analysis.py:64 root - INFO - Saved box plot for CASH_ADVANCE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_boxplot.png
+[ 2025-06-22 19:31:44,343 ] eda_analysis.py:64 root - INFO - Saved box plot for PURCHASES_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_FREQUENCY_boxplot.png
+[ 2025-06-22 19:31:44,588 ] eda_analysis.py:64 root - INFO - Saved box plot for ONEOFF_PURCHASES_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\ONEOFF_PURCHASES_FREQUENCY_boxplot.png
+[ 2025-06-22 19:31:44,824 ] eda_analysis.py:64 root - INFO - Saved box plot for PURCHASES_INSTALLMENTS_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_INSTALLMENTS_FREQUENCY_boxplot.png
+[ 2025-06-22 19:31:45,234 ] eda_analysis.py:64 root - INFO - Saved box plot for CASH_ADVANCE_FREQUENCY to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_FREQUENCY_boxplot.png
+[ 2025-06-22 19:31:45,475 ] eda_analysis.py:64 root - INFO - Saved box plot for CASH_ADVANCE_TRX to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CASH_ADVANCE_TRX_boxplot.png
+[ 2025-06-22 19:31:45,709 ] eda_analysis.py:64 root - INFO - Saved box plot for PURCHASES_TRX to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PURCHASES_TRX_boxplot.png
+[ 2025-06-22 19:31:45,943 ] eda_analysis.py:64 root - INFO - Saved box plot for CREDIT_LIMIT to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\CREDIT_LIMIT_boxplot.png
+[ 2025-06-22 19:31:46,183 ] eda_analysis.py:64 root - INFO - Saved box plot for PAYMENTS to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PAYMENTS_boxplot.png
+[ 2025-06-22 19:31:46,416 ] eda_analysis.py:64 root - INFO - Saved box plot for MINIMUM_PAYMENTS to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\MINIMUM_PAYMENTS_boxplot.png
+[ 2025-06-22 19:31:46,655 ] eda_analysis.py:64 root - INFO - Saved box plot for PRC_FULL_PAYMENT to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\PRC_FULL_PAYMENT_boxplot.png
+[ 2025-06-22 19:31:46,884 ] eda_analysis.py:64 root - INFO - Saved box plot for TENURE to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\TENURE_boxplot.png
+[ 2025-06-22 19:31:47,573 ] eda_analysis.py:75 root - INFO - Saved correlation matrix heatmap to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\plots\correlation_matrix.png
+[ 2025-06-22 19:31:47,573 ] eda_analysis.py:87 root - WARNING - Skipping pairplot due to large number of numerical features (>5). Consider selecting a subset.
+[ 2025-06-22 19:31:47,573 ] eda_analysis.py:91 root - INFO - Visualizations generated and saved.
+[ 2025-06-22 19:31:47,573 ] eda_analysis.py:101 root - INFO - Generating EDA report...
+[ 2025-06-22 19:31:47,580 ] eda_analysis.py:131 root - INFO - EDA report saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\eda_analysis\eda_report.txt
+[ 2025-06-22 19:31:47,581 ] eda_analysis.py:161 root - INFO - EDA analysis completed successfully.
+[ 2025-06-22 19:31:47,581 ] training_pipeline.py:151 root - INFO - EDA Analysis stage completed.
+[ 2025-06-22 19:31:47,581 ] training_pipeline.py:155 root - INFO - Starting Model Training stage in pipeline...
+[ 2025-06-22 19:31:47,581 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer
+[ 2025-06-22 19:31:47,582 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer
+[ 2025-06-22 19:31:47,582 ] model_trainer.py:90 root - INFO - Starting model training process.
+[ 2025-06-22 19:31:47,625 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:47,625 ] model_trainer.py:99 root - INFO - Loaded transformed data for training from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:47,625 ] model_trainer.py:36 root - INFO - Starting KMeans model training.
+[ 2025-06-22 19:31:49,291 ] model_trainer.py:44 root - INFO - KMeans model trained with 3 clusters.
+[ 2025-06-22 19:31:49,292 ] model_trainer.py:45 root - INFO - KMeans cluster centers:
+[[ 1.42839098  0.38453693 -0.19954914 -0.13843024 -0.21762157  1.68122561
+  -0.51125394 -0.2215457  -0.44774753  1.73689354  1.61321457 -0.25569476
+   0.81342938  0.638296    0.53351466 -0.40005491 -0.09546769]
+ [-0.29888139 -0.3711095  -0.32800442 -0.23180399 -0.34949161 -0.2143363
+  -0.61160957 -0.37230544 -0.54401022 -0.15670055 -0.19695685 -0.43133863
+  -0.34978415 -0.2783946  -0.13093164 -0.20722036 -0.090683  ]
+ [-0.13230968  0.38489248  0.55345406  0.39010627  0.59168709 -0.35459184
+   1.08701313  0.62624579  0.96410169 -0.45998881 -0.35284749  0.72515681
+   0.18447031  0.15042466 -0.02149927  0.45797534  0.16894538]]
+[ 2025-06-22 19:31:49,292 ] model_trainer.py:46 root - INFO - KMeans inertia: 112596.37091242975
+[ 2025-06-22 19:31:49,296 ] utils.py:75 root - INFO - Object saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer\model.pkl
+[ 2025-06-22 19:31:49,297 ] model_trainer.py:121 root - INFO - KMeans model saved to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer\model.pkl
+[ 2025-06-22 19:31:49,297 ] model_trainer.py:135 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/model_trainer/model.pkl'), is_trained=True, message='Model training (KMeans primary) completed successfully.')
+[ 2025-06-22 19:31:49,297 ] training_pipeline.py:163 root - INFO - Model Training stage completed.
+[ 2025-06-22 19:31:49,297 ] training_pipeline.py:167 root - INFO - Starting Clustering Evaluation stage in pipeline...
+[ 2025-06-22 19:31:49,298 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation
+[ 2025-06-22 19:31:49,298 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation
+[ 2025-06-22 19:31:49,298 ] clustering_evaluation.py:180 root - INFO - Starting clustering model evaluation.
+[ 2025-06-22 19:31:49,312 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer\model.pkl
+[ 2025-06-22 19:31:49,312 ] clustering_evaluation.py:189 root - INFO - Loaded primary model from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\model_trainer\model.pkl
+[ 2025-06-22 19:31:49,356 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\data_transformation\data_transformed.csv
+[ 2025-06-22 19:31:49,356 ] clustering_evaluation.py:193 root - INFO - Loaded transformed data for evaluation. Shape: (8950, 17)
+[ 2025-06-22 19:31:49,356 ] clustering_evaluation.py:56 root - INFO - Evaluating KMeans...
+[ 2025-06-22 19:31:50,771 ] clustering_metrics.py:35 root - INFO - Calculated Silhouette Score: 0.20671817817880617
+[ 2025-06-22 19:31:50,777 ] clustering_metrics.py:59 root - INFO - Calculated Davies-Bouldin Score: 1.6593865064655908
+[ 2025-06-22 19:31:50,777 ] clustering_evaluation.py:88 root - INFO - KMeans metrics: {'silhouette_score': 0.20671817817880617, 'davies_bouldin_score': 1.6593865064655908, 'num_clusters_found': 3}
+[ 2025-06-22 19:31:50,777 ] clustering_evaluation.py:101 root - INFO - Performing Elbow method for KMeans (max_k=10)...
+[ 2025-06-22 19:31:50,925 ] clustering_metrics.py:85 root - INFO - Calculated SSE for Elbow Method (up to k=10): {1: 152150.00000000003, 2: 128953.36240712076, 3: 112596.37091242975, 4: 105339.67513964904, 5: 92131.46554453025, 6: 87266.63107228179, 7: 83153.95039671984, 8: 76655.40983277166, 9: 73554.47372048868, 10: 68221.10748878567}
+[ 2025-06-22 19:31:51,156 ] clustering_metrics.py:113 root - INFO - Elbow method plot saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\elbow_method_plot.png
+[ 2025-06-22 19:31:51,168 ] clustering_evaluation.py:107 root - INFO - Elbow method plot saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\elbow_method_plot.png
+[ 2025-06-22 19:31:51,168 ] clustering_evaluation.py:207 root - INFO - Re-training DBSCAN for evaluation purposes (ideally, load if saved by trainer).
+[ 2025-06-22 19:31:51,263 ] clustering_evaluation.py:56 root - INFO - Evaluating DBSCAN...
+[ 2025-06-22 19:31:51,378 ] clustering_metrics.py:35 root - INFO - Calculated Silhouette Score: -0.375806123426773
+[ 2025-06-22 19:31:51,390 ] clustering_metrics.py:59 root - INFO - Calculated Davies-Bouldin Score: 0.9662962074344177
+[ 2025-06-22 19:31:51,391 ] clustering_evaluation.py:88 root - INFO - DBSCAN metrics: {'silhouette_score': -0.375806123426773, 'davies_bouldin_score': 0.9662962074344177, 'num_clusters_found': 36, 'noise_points_found': 6624}
+[ 2025-06-22 19:31:51,392 ] utils.py:118 root - INFO - JSON file saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\evaluation_metrics.json
+[ 2025-06-22 19:31:51,393 ] clustering_evaluation.py:224 root - INFO - Clustering metrics saved to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\evaluation_metrics.json
+[ 2025-06-22 19:31:51,393 ] clustering_evaluation.py:127 root - INFO - Extracting business insights for KMeans...
+[ 2025-06-22 19:31:51,411 ] clustering_evaluation.py:171 root - INFO - Business insights for KMeans saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\KMeans_insights.txt
+[ 2025-06-22 19:31:51,411 ] clustering_evaluation.py:127 root - INFO - Extracting business insights for DBSCAN...
+[ 2025-06-22 19:31:51,478 ] clustering_evaluation.py:171 root - INFO - Business insights for DBSCAN saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\DBSCAN_insights.txt
+[ 2025-06-22 19:31:51,480 ] clustering_evaluation.py:281 root - INFO - Combined evaluation and insights report saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\artifacts\customer_segments_pipeline\20250622_193133\clustering_evaluation\clustering_insights_report.txt
+[ 2025-06-22 19:31:51,480 ] clustering_evaluation.py:293 root - INFO - Clustering evaluation artifact: ClusteringEvaluationArtifact(evaluation_metrics={'KMeans': {'silhouette_score': 0.20671817817880617, 'davies_bouldin_score': 1.6593865064655908, 'num_clusters_found': 3}, 'DBSCAN': {'silhouette_score': -0.375806123426773, 'davies_bouldin_score': 0.9662962074344177, 'num_clusters_found': 36, 'noise_points_found': 6624}}, insights_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/artifacts/customer_segments_pipeline/20250622_193133/clustering_evaluation/clustering_insights_report.txt'), is_evaluated=True, message='Clustering evaluation and initial business insights extraction completed.')
+[ 2025-06-22 19:31:51,480 ] training_pipeline.py:180 root - INFO - Clustering Evaluation stage completed.
+[ 2025-06-22 19:31:51,480 ] training_pipeline.py:218 root - INFO - Training pipeline completed successfully for run: 20250622_193133
+[ 2025-06-22 19:31:51,480 ] main.py:84 root - INFO - --- Main: Training Pipeline Run 20250622_193133 Finished Successfully ---

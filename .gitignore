@@ -1,0 +1,8 @@
+# no - venv , egg info , pycache , pytest, no init file -give code no comments direct code
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.venv/
+*.egg
+*.pyo
+*.pyd

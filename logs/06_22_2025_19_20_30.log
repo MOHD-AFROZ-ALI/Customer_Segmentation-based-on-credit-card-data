@@ -1,0 +1,81 @@
+[ 2025-06-22 19:20:32,580 ] _internal.py:97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-06-22 19:20:32,586 ] _internal.py:97 werkzeug - INFO -  * Debugger PIN: 131-102-869
+[ 2025-06-22 19:20:32,825 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:20:32] "GET / HTTP/1.1" 200 -
+[ 2025-06-22 19:20:41,648 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:20:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-06-22 19:20:51,469 ] app.py:88 root - INFO - File uploaded successfully: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\603b029c-194a-4bce-9549-d4776c8cab59_data_credit_card_customer_seg (1).csv
+[ 2025-06-22 19:20:51,471 ] app.py:104 root - INFO - Initiating Batch Prediction Pipeline...
+[ 2025-06-22 19:20:51,471 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-22 19:20:51,472 ] batch_prediction.py:124 root - INFO - Starting batch prediction pipeline...
+[ 2025-06-22 19:20:51,511 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\603b029c-194a-4bce-9549-d4776c8cab59_data_credit_card_customer_seg (1).csv
+[ 2025-06-22 19:20:51,511 ] batch_prediction.py:127 root - INFO - Loaded input data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\603b029c-194a-4bce-9549-d4776c8cab59_data_credit_card_customer_seg (1).csv for batch prediction. Shape: (8950, 18)
+[ 2025-06-22 19:20:51,511 ] batch_prediction.py:29 root - INFO - Starting batch prediction...
+[ 2025-06-22 19:20:51,523 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:20:51,523 ] batch_prediction.py:36 root - INFO - Preprocessor loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:20:51,524 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:20:51,524 ] batch_prediction.py:43 root - INFO - Model loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:20:51,525 ] batch_prediction.py:56 root - INFO - Dropped columns for prediction: ['CUST_ID']
+[ 2025-06-22 19:20:51,531 ] batch_prediction.py:84 root - INFO - Input data transformed for prediction.
+[ 2025-06-22 19:20:51,637 ] batch_prediction.py:100 root - INFO - Predictions made.
+[ 2025-06-22 19:20:51,639 ] batch_prediction.py:107 root - INFO - Cluster labels added to the output DataFrame.
+[ 2025-06-22 19:20:51,760 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:20:51,760 ] batch_prediction.py:132 root - INFO - Batch prediction results saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:20:51,760 ] batch_prediction.py:140 root - INFO - Batch prediction artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=8950, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-22 19:20:51,761 ] app.py:109 root - INFO - Batch prediction successful.
+[ 2025-06-22 19:20:51,794 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:20:51,828 ] app.py:147 root - ERROR - Unexpected error during upload/prediction: Could not build url for endpoint 'download_prediction_route' with values ['filename']. Did you mean 'download_prediction' instead?
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\app.py", line 127, in upload_file
+    return render_template('index.html',
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\templates\index.html", line 70, in top-level template code
+    <p><a href="{{ url_for('download_prediction_route', filename=prediction_filename) }}" class="btn btn-success btn-sm">Download Full Results CSV</a></p>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\CUSTO\venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'download_prediction_route' with values ['filename']. Did you mean 'download_prediction' instead?
+
+[ 2025-06-22 19:20:51,829 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:20:51] "[32mPOST /upload HTTP/1.1[0m" 302 -
+[ 2025-06-22 19:20:51,835 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:20:51] "GET / HTTP/1.1" 200 -
+[ 2025-06-22 19:21:03,719 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:21:03] "[31m[1mPOST /run_training HTTP/1.1[0m" 405 -
+[ 2025-06-22 19:21:06,681 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:21:06] "GET / HTTP/1.1" 200 -
+[ 2025-06-22 19:21:59,437 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:21:59] "GET / HTTP/1.1" 200 -
+[ 2025-06-22 19:24:04,284 ] app.py:88 root - INFO - File uploaded successfully: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\2a655404-eaf8-4e80-957a-c031d5cc9f84_Customer Data.csv
+[ 2025-06-22 19:24:04,284 ] app.py:104 root - INFO - Initiating Batch Prediction Pipeline...
+[ 2025-06-22 19:24:04,285 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-22 19:24:04,285 ] batch_prediction.py:124 root - INFO - Starting batch prediction pipeline...
+[ 2025-06-22 19:24:04,289 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\2a655404-eaf8-4e80-957a-c031d5cc9f84_Customer Data.csv
+[ 2025-06-22 19:24:04,289 ] batch_prediction.py:127 root - INFO - Loaded input data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\uploads\2a655404-eaf8-4e80-957a-c031d5cc9f84_Customer Data.csv for batch prediction. Shape: (9, 18)
+[ 2025-06-22 19:24:04,290 ] batch_prediction.py:29 root - INFO - Starting batch prediction...
+[ 2025-06-22 19:24:04,290 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:24:04,290 ] batch_prediction.py:36 root - INFO - Preprocessor loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:24:04,291 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:24:04,291 ] batch_prediction.py:43 root - INFO - Model loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:24:04,292 ] batch_prediction.py:56 root - INFO - Dropped columns for prediction: ['CUST_ID']
+[ 2025-06-22 19:24:04,295 ] batch_prediction.py:84 root - INFO - Input data transformed for prediction.
+[ 2025-06-22 19:24:04,297 ] batch_prediction.py:100 root - INFO - Predictions made.
+[ 2025-06-22 19:24:04,297 ] batch_prediction.py:107 root - INFO - Cluster labels added to the output DataFrame.
+[ 2025-06-22 19:24:04,300 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:24:04,300 ] batch_prediction.py:132 root - INFO - Batch prediction results saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:24:04,300 ] batch_prediction.py:140 root - INFO - Batch prediction artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=9, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-22 19:24:04,300 ] app.py:109 root - INFO - Batch prediction successful.
+[ 2025-06-22 19:24:04,318 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:24:04,326 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:24:04] "POST /upload HTTP/1.1" 200 -
+[ 2025-06-22 19:24:14,668 ] app.py:160 root - INFO - Attempting to send file: clustered_results.csv from directory: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-22 19:24:14,723 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:24:14] "GET /download_prediction/clustered_results.csv HTTP/1.1" 200 -
+[ 2025-06-22 19:24:18,650 ] _internal.py:97 werkzeug - INFO - 127.0.0.1 - - [22/Jun/2025 19:24:18] "[31m[1mPOST /run_training HTTP/1.1[0m" 405 -

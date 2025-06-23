@@ -1,0 +1,74 @@
+Business Insights from KMeans Clusters:
+==============================================
+
+Cluster Profiles (Mean Values of Features):
+          BALANCE  BALANCE_FREQUENCY  PURCHASES  ONEOFF_PURCHASES  INSTALLMENTS_PURCHASES  CASH_ADVANCE  PURCHASES_FREQUENCY  ONEOFF_PURCHASES_FREQUENCY  PURCHASES_INSTALLMENTS_FREQUENCY  CASH_ADVANCE_FREQUENCY  CASH_ADVANCE_TRX  PURCHASES_TRX  CREDIT_LIMIT  PAYMENTS  MINIMUM_PAYMENTS  PRC_FULL_PAYMENT    TENURE
+CLUSTER                                                                                                                                                                                                                                                                                                                  
+0        1.429943           0.385355  -0.199332         -0.138255               -0.217431      1.682105            -0.510683                   -0.221178                         -0.447370                1.737494          1.612303      -0.255425      0.814634  0.638383          0.534170         -0.400739 -0.095834
+1       -0.298926          -0.371167  -0.328035         -0.231831               -0.349515     -0.214160            -0.611743                   -0.372373                         -0.544092               -0.156449         -0.196311      -0.431374     -0.349858 -0.278217         -0.130965         -0.207076 -0.090584
+2       -0.132310           0.384892   0.553454          0.390106                0.591687     -0.354592             1.087013                    0.626246                          0.964102               -0.459989         -0.352847       0.725157      0.184470  0.150425         -0.021499          0.457975  0.168945
+
+Interpretation Hints:
+
+--- Cluster 0 ---
+   - Size: 1244 customers
+   - High BALANCE: 1.43 (Overall avg: 0.00)
+   - High BALANCE_FREQUENCY: 0.39 (Overall avg: 0.00)
+   - Low PURCHASES: -0.20 (Overall avg: 0.00)
+   - Low ONEOFF_PURCHASES: -0.14 (Overall avg: 0.00)
+   - Low INSTALLMENTS_PURCHASES: -0.22 (Overall avg: 0.00)
+   - High CASH_ADVANCE: 1.68 (Overall avg: 0.00)
+   - Low PURCHASES_FREQUENCY: -0.51 (Overall avg: -0.00)
+   - Low ONEOFF_PURCHASES_FREQUENCY: -0.22 (Overall avg: -0.00)
+   - Low PURCHASES_INSTALLMENTS_FREQUENCY: -0.45 (Overall avg: 0.00)
+   - High CASH_ADVANCE_FREQUENCY: 1.74 (Overall avg: 0.00)
+   - High CASH_ADVANCE_TRX: 1.61 (Overall avg: 0.00)
+   - Low PURCHASES_TRX: -0.26 (Overall avg: -0.00)
+   - High CREDIT_LIMIT: 0.81 (Overall avg: 0.00)
+   - High PAYMENTS: 0.64 (Overall avg: -0.00)
+   - High MINIMUM_PAYMENTS: 0.53 (Overall avg: 0.00)
+   - Low PRC_FULL_PAYMENT: -0.40 (Overall avg: 0.00)
+   - Low TENURE: -0.10 (Overall avg: 0.00)
+   - Potential Segment Name: [e.g., High Spenders, Low Balance Holders, etc. - requires domain knowledge]
+
+--- Cluster 1 ---
+   - Size: 4557 customers
+   - Low BALANCE: -0.30 (Overall avg: 0.00)
+   - Low BALANCE_FREQUENCY: -0.37 (Overall avg: 0.00)
+   - Low PURCHASES: -0.33 (Overall avg: 0.00)
+   - Low ONEOFF_PURCHASES: -0.23 (Overall avg: 0.00)
+   - Low INSTALLMENTS_PURCHASES: -0.35 (Overall avg: 0.00)
+   - Low CASH_ADVANCE: -0.21 (Overall avg: 0.00)
+   - Low PURCHASES_FREQUENCY: -0.61 (Overall avg: -0.00)
+   - Low ONEOFF_PURCHASES_FREQUENCY: -0.37 (Overall avg: -0.00)
+   - Low PURCHASES_INSTALLMENTS_FREQUENCY: -0.54 (Overall avg: 0.00)
+   - Low CASH_ADVANCE_FREQUENCY: -0.16 (Overall avg: 0.00)
+   - Low CASH_ADVANCE_TRX: -0.20 (Overall avg: 0.00)
+   - Low PURCHASES_TRX: -0.43 (Overall avg: -0.00)
+   - Low CREDIT_LIMIT: -0.35 (Overall avg: 0.00)
+   - Low PAYMENTS: -0.28 (Overall avg: -0.00)
+   - Low MINIMUM_PAYMENTS: -0.13 (Overall avg: 0.00)
+   - Low PRC_FULL_PAYMENT: -0.21 (Overall avg: 0.00)
+   - Low TENURE: -0.09 (Overall avg: 0.00)
+   - Potential Segment Name: [e.g., High Spenders, Low Balance Holders, etc. - requires domain knowledge]
+
+--- Cluster 2 ---
+   - Size: 3149 customers
+   - Low BALANCE: -0.13 (Overall avg: 0.00)
+   - High BALANCE_FREQUENCY: 0.38 (Overall avg: 0.00)
+   - High PURCHASES: 0.55 (Overall avg: 0.00)
+   - High ONEOFF_PURCHASES: 0.39 (Overall avg: 0.00)
+   - High INSTALLMENTS_PURCHASES: 0.59 (Overall avg: 0.00)
+   - Low CASH_ADVANCE: -0.35 (Overall avg: 0.00)
+   - High PURCHASES_FREQUENCY: 1.09 (Overall avg: -0.00)
+   - High ONEOFF_PURCHASES_FREQUENCY: 0.63 (Overall avg: -0.00)
+   - High PURCHASES_INSTALLMENTS_FREQUENCY: 0.96 (Overall avg: 0.00)
+   - Low CASH_ADVANCE_FREQUENCY: -0.46 (Overall avg: 0.00)
+   - Low CASH_ADVANCE_TRX: -0.35 (Overall avg: 0.00)
+   - High PURCHASES_TRX: 0.73 (Overall avg: -0.00)
+   - High CREDIT_LIMIT: 0.18 (Overall avg: 0.00)
+   - High PAYMENTS: 0.15 (Overall avg: -0.00)
+   - Low MINIMUM_PAYMENTS: -0.02 (Overall avg: 0.00)
+   - High PRC_FULL_PAYMENT: 0.46 (Overall avg: 0.00)
+   - High TENURE: 0.17 (Overall avg: 0.00)
+   - Potential Segment Name: [e.g., High Spenders, Low Balance Holders, etc. - requires domain knowledge]

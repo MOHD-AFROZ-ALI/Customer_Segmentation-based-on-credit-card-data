@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+flask
+matplotlib
+seaborn
+PyYAML
+dill
+# Add any other specific versions if known or necessary, e.g.
+# pandas==1.5.3
+# scikit-learn==1.2.2
+# Flask==2.2.2
