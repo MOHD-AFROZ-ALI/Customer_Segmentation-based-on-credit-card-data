@@ -1,0 +1,13 @@
+{
+    "KMeans": {
+        "silhouette_score": 0.20671817817880617,
+        "davies_bouldin_score": 1.6593865064655908,
+        "num_clusters_found": 3
+    },
+    "DBSCAN": {
+        "silhouette_score": -0.375806123426773,
+        "davies_bouldin_score": 0.9662962074344177,
+        "num_clusters_found": 36,
+        "noise_points_found": 6624
+    }
+}

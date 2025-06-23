@@ -1,0 +1,36 @@
+Exploratory Data Analysis Report
+=================================
+
+1. Dataset Overview:
+   - Number of records: 8950
+   - Number of features: 17
+
+2. Descriptive Statistics:
+                                   count          mean       std       min       25%       50%       75%        max
+BALANCE                           8950.0  8.891708e-17  1.000056 -0.751640 -0.690008 -0.332029  0.235256   8.397489
+BALANCE_FREQUENCY                 8950.0  2.095903e-16  1.000056 -3.703271  0.049045  0.518084  0.518084   0.518084
+PURCHASES                         8950.0  0.000000e+00  1.000056 -0.469552 -0.451001 -0.300454  0.050047  22.483510
+ONEOFF_PURCHASES                  8950.0  4.445854e-17  1.000056 -0.356934 -0.356934 -0.334040 -0.009057  24.201066
+INSTALLMENTS_PURCHASES            8950.0  3.810732e-17  1.000056 -0.454576 -0.454576 -0.356156  0.063663  24.426889
+CASH_ADVANCE                      8950.0  1.079707e-16  1.000056 -0.466786 -0.466786 -0.466786  0.064352  22.011117
+PURCHASES_FREQUENCY               8950.0 -2.318195e-16  1.000056 -1.221758 -1.014125  0.024043  1.062211   1.269843
+ONEOFF_PURCHASES_FREQUENCY        8950.0 -8.891708e-17  1.000056 -0.678661 -0.678661 -0.399319  0.326973   2.673451
+PURCHASES_INSTALLMENTS_FREQUENCY  8950.0  1.063829e-16  1.000056 -0.916995 -0.916995 -0.497629  0.970151   1.599199
+CASH_ADVANCE_FREQUENCY            8950.0  5.398537e-17  1.000056 -0.675349 -0.675349 -0.675349  0.435149   6.820521
+CASH_ADVANCE_TRX                  8950.0  1.746585e-17  1.000056 -0.476070 -0.476070 -0.476070  0.110074  17.547848
+PURCHASES_TRX                     8950.0 -1.270244e-17  1.000056 -0.591796 -0.551565 -0.310177  0.092136  13.811014
+CREDIT_LIMIT                      8950.0  1.270244e-16  1.000056 -1.221479 -0.795473 -0.410693  0.551257   7.010063
+PAYMENTS                          8950.0 -2.540488e-17  1.000056 -0.598688 -0.466291 -0.302685  0.058030  16.922279
+MINIMUM_PAYMENTS                  8950.0  6.986342e-17  1.000056 -0.362199 -0.288961 -0.228307 -0.024090  32.392735
+PRC_FULL_PAYMENT                  8950.0  3.175610e-18  1.000056 -0.525551 -0.525551 -0.525551 -0.037122   2.893453
+TENURE                            8950.0  1.778342e-16  1.000056 -4.122768  0.360680  0.360680  0.360680   0.360680
+
+3. Null Value Analysis (from transformed data - should be 0 after imputation):
+   No null values found in the transformed data (as expected after imputation).
+
+4. Initial Insights & Patterns (Qualitative):
+   - [Placeholder] Observe distributions from histograms (skewness, modality).
+   - [Placeholder] Identify potential outliers from box plots.
+   - [Placeholder] Note strong correlations (positive/negative) from the heatmap.
+   - [Placeholder] Visual patterns from pairplots (if generated) suggesting clusters or relationships.
+   - Note: This EDA is on *transformed* (scaled, imputed) data. Original scale insights might differ.
