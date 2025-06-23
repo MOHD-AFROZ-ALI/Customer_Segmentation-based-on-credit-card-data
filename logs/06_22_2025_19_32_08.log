@@ -1,0 +1,31 @@
+[ 2025-06-22 19:32:08,871 ] utils.py:75 root - INFO - Object saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:32:08,872 ] batch_prediction.py:195 root - INFO - Saved dummy preprocessor to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:32:10,481 ] utils.py:75 root - INFO - Object saved at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:32:10,482 ] batch_prediction.py:203 root - INFO - Saved dummy KMeans model to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:32:10,488 ] batch_prediction.py:219 root - INFO - Created dummy input CSV for batch prediction at C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\temp_batch_input\batch_input_data.csv
+[ 2025-06-22 19:32:10,488 ] batch_prediction.py:232 root - INFO - Batch Prediction Config for test: BatchPredictionConfig(input_csv_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/temp_batch_input/batch_input_data.csv'), output_csv_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), model_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/final_model/model.pkl'), preprocessor_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/final_model/preprocessor.pkl'))
+[ 2025-06-22 19:32:10,488 ] utils.py:155 root - INFO - Created directory at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output
+[ 2025-06-22 19:32:10,489 ] batch_prediction.py:124 root - INFO - Starting batch prediction pipeline...
+[ 2025-06-22 19:32:10,503 ] utils.py:186 root - INFO - CSV file loaded successfully from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\temp_batch_input\batch_input_data.csv
+[ 2025-06-22 19:32:10,504 ] batch_prediction.py:127 root - INFO - Loaded input data from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\temp_batch_input\batch_input_data.csv for batch prediction. Shape: (3, 18)
+[ 2025-06-22 19:32:10,504 ] batch_prediction.py:29 root - INFO - Starting batch prediction...
+[ 2025-06-22 19:32:10,515 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:32:10,516 ] batch_prediction.py:36 root - INFO - Preprocessor loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\preprocessor.pkl
+[ 2025-06-22 19:32:10,534 ] utils.py:98 root - INFO - Object loaded from: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:32:10,534 ] batch_prediction.py:43 root - INFO - Model loaded from C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\final_model\model.pkl
+[ 2025-06-22 19:32:10,535 ] batch_prediction.py:56 root - INFO - Dropped columns for prediction: ['CUST_ID']
+[ 2025-06-22 19:32:10,537 ] batch_prediction.py:84 root - INFO - Input data transformed for prediction.
+[ 2025-06-22 19:32:10,539 ] batch_prediction.py:100 root - INFO - Predictions made.
+[ 2025-06-22 19:32:10,540 ] batch_prediction.py:107 root - INFO - Cluster labels added to the output DataFrame.
+[ 2025-06-22 19:32:10,542 ] utils.py:207 root - INFO - DataFrame saved to CSV at: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:32:10,542 ] batch_prediction.py:132 root - INFO - Batch prediction results saved to C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:32:10,542 ] batch_prediction.py:140 root - INFO - Batch prediction artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=3, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-22 19:32:10,542 ] batch_prediction.py:237 root - INFO - Batch Prediction Pipeline test finished. Artifact: BatchPredictionArtifact(output_file_path=WindowsPath('C:/Users/hp/Desktop/CUSTO/customer_segments_productionjules/prediction_output/clustered_results.csv'), num_records_processed=3, is_prediction_successful=True, message='Batch prediction completed successfully.')
+[ 2025-06-22 19:32:10,542 ] batch_prediction.py:241 root - INFO - Batch predictions saved to: C:\Users\hp\Desktop\CUSTO\customer_segments_productionjules\prediction_output\clustered_results.csv
+[ 2025-06-22 19:32:10,575 ] batch_prediction.py:247 root - INFO - Output CSV content head:
+     CUST_ID      BALANCE  BALANCE_FREQUENCY    PURCHASES  ONEOFF_PURCHASES  INSTALLMENTS_PURCHASES  ...  CREDIT_LIMIT    PAYMENTS  MINIMUM_PAYMENTS  PRC_FULL_PAYMENT      TENURE  CLUSTER
+0  NEW_CUST1   171.934078        1100.523604   265.007317        728.151338              304.279287  ...   1685.660773   60.000417        393.747379        959.232004  257.438340        0
+1  NEW_CUST2  2461.097074        2921.224834  1167.730569        585.060839              254.033329  ...   1021.247855  718.457594        848.327135       1213.790553  418.493764        0
+2  NEW_CUST3   432.237451         769.866215   873.046008        907.837973              711.306519  ...     23.623590  944.922674         76.414355        320.462971  236.189496        2
+
+[3 rows x 19 columns]

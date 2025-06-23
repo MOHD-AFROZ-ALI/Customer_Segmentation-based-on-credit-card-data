@@ -46,110 +46,24 @@
 
 {% block body_scripts %}
 <script>
-// This script was in _upload_form.html, moved here to be part of main page scripts
-// It updates the custom file input label with the selected file name.
+// This script block is now primarily for passing initial data from Flask to JavaScript,
+// if needed for immediate rendering on page load before static/js/main.js might fully take over
+// or for data that main.js expects to be globally available.
+
+// static/js/main.js handles:
+// - File input label updates.
+// - AJAX form submission for 'uploadForm'.
+// - Initial chart rendering if global variables like 'initialVisualsData' are set.
+
 document.addEventListener('DOMContentLoaded', function () {
-    const fileInput = document.getElementById('fileInput');
-    if (fileInput) {
-        fileInput.addEventListener('change', function(e) {
-            var fileName = e.target.files[0] ? e.target.files[0].name : 'Select file...';
-            var nextSibling = e.target.nextElementSibling; // This is the <label>
-            if (nextSibling && nextSibling.classList.contains('custom-file-label')) {
-                nextSibling.innerText = fileName;
-            }
-        });
-    }
+    // Make data from Flask available globally for static/js/main.js to use for initial chart rendering.
+    // The actual rendering calls are within main.js's DOMContentLoaded listener.
+    // visuals_data_json is passed from app.py's index route.
+    window.initialVisualsData = {{ visuals_data_json|default('{}')|tojson|safe }};
 
-    // Initialize with default values if needed or passed from Flask
-    // For example, to render charts if data is already present on page load (e.g. after form submission)
-    const initialVisualsData = {{ visuals_data_json|default('{}')|tojson|safe }};
-    if (initialVisualsData && typeof renderClusterDistributionChart === 'function') {
-        renderClusterDistributionChart(initialVisualsData);
-    }
-    // Add calls for other charts if data is available
-    // renderScatterPlot(initialScatterData);
-    // renderRadarChart(initialRadarData);
-
-
-    // AJAX form submission for upload (example structure)
-    const uploadForm = document.getElementById('uploadForm');
-    if (uploadForm) {
-        uploadForm.addEventListener('submit', function(event) {
-            // Basic client-side validation example
-            const file = document.getElementById('fileInput').files[0];
-            if (!file) {
-                alert("Please select a file.");
-                event.preventDefault(); // Stop submission
-                return;
-            }
-            if (!file.name.endsWith('.csv')) {
-                alert("Please select a CSV file.");
-                event.preventDefault(); // Stop submission
-                return;
-            }
-
-            // Show spinner on submit button (Bootstrap integration)
-            const submitButton = uploadForm.querySelector('button[type="submit"]');
-            const spinner = submitButton.querySelector('.spinner-border');
-            if (spinner) {
-                spinner.classList.remove('d-none');
-                submitButton.disabled = true;
-            }
-
-            // If not using AJAX, the form will submit normally.
-            // If using AJAX, preventDefault and handle with fetch:
-            // event.preventDefault();
-            // handleUploadWithAjax(this);
-            // Spinner would be hidden in the AJAX response handling.
-        });
-    }
+    // If you have other initial data for scatter plots or radar charts, define them similarly:
+    // window.initialScatterData = {{ scatter_data_json|default('{}')|tojson|safe }};
+    // window.initialRadarData = {{ radar_data_json|default('{}')|tojson|safe }};
 });
-
-// Placeholder for AJAX handler - will be developed in a later step
-// function handleUploadWithAjax(form) {
-//     const formData = new FormData(form);
-//     const feedbackDiv = document.getElementById('upload-feedback');
-//     feedbackDiv.innerHTML = '<div class="alert alert-info">Processing...</div>';
-
-//     fetch("{{ url_for('upload_file') }}", {
-//         method: 'POST',
-//         body: formData,
-//     })
-//     .then(response => response.json()) // Assuming server responds with JSON
-//     .then(data => {
-//         // Hide spinner
-//         const submitButton = form.querySelector('button[type="submit"]');
-//         const spinner = submitButton.querySelector('.spinner-border');
-//         if (spinner) {
-//             spinner.classList.add('d-none');
-//             submitButton.disabled = false;
-//         }
-
-//         if (data.error) {
-//             feedbackDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
-//             // Clear previous results
-//             document.getElementById('results-table-container').innerHTML = '<p class="text-muted">Prediction failed.</p>';
-//             // Clear other sections as needed
-//         } else {
-//             feedbackDiv.innerHTML = `<div class="alert alert-success">${data.message || 'Processing complete!'}</div>`;
-//             // Update sections with new data
-//             // Example: document.getElementById('results-table-container').innerHTML = data.results_table_html;
-//             // renderClusterDistributionChart(data.visuals_data_json.cluster_distribution);
-//             // Update insights, recommendations etc.
-//             // This requires app.py to return JSON with all these parts.
-//         }
-//     })
-//     .catch(error => {
-//         // Hide spinner
-//         const submitButton = form.querySelector('button[type="submit"]');
-//         const spinner = submitButton.querySelector('.spinner-border');
-//         if (spinner) {
-//             spinner.classList.add('d-none');
-//             submitButton.disabled = false;
-//         }
-//         feedbackDiv.innerHTML = `<div class="alert alert-danger">An error occurred: ${error}</div>`;
-//         console.error('Error:', error);
-//     });
-// }
 </script>
 {% endblock %}

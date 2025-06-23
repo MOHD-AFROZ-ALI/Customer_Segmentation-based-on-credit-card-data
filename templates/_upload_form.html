@@ -22,19 +22,3 @@
         </div>
     </div>
 </section>
-
-<script>
-// Script to update the custom file input label
-document.addEventListener('DOMContentLoaded', function () {
-    const fileInput = document.getElementById('fileInput');
-    if (fileInput) {
-        fileInput.addEventListener('change', function(e) {
-            var fileName = e.target.files[0] ? e.target.files[0].name : 'Select file...';
-            var nextSibling = e.target.nextElementSibling;
-            if (nextSibling && nextSibling.classList.contains('custom-file-label')) {
-                nextSibling.innerText = fileName;
-            }
-        });
-    }
-});
-</script>
