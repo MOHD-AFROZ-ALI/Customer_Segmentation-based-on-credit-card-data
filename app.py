@@ -69,9 +69,6 @@ def index():
     """Renders the main upload page."""
     return render_template('index.html', results=None, insights=None, visuals=None, uploaded_filename=None)
 
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    """Handles file upload, triggers batch prediction, and displays results."""
 from flask import jsonify # Added jsonify
 
 # ... (other imports remain the same)
