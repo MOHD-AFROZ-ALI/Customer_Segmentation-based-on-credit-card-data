@@ -1,0 +1,35 @@
+{% if visuals_data_json and visuals_data_json != '{}' %}
+<section id="visualizations-section" class="my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-warning text-dark">
+            <h2 class="h5 mb-0">Visualizations</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-container" style="position: relative; height:300px; width:100%">
+                        <canvas id="clusterDistributionChart"></canvas>
+                    </div>
+                    <p class="text-center mt-2">Cluster Distribution</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Placeholder for another chart -->
+                    <div id="scatterPlotContainer" style="position: relative; height:300px; width:100%">
+                         <canvas id="clusterScatterPlot"></canvas>
+                    </div>
+                     <p class="text-center mt-2">Feature Scatter Plot (Placeholder)</p>
+                </div>
+            </div>
+             <div class="row mt-3">
+                <div class="col-md-12">
+                    <!-- Placeholder for another chart -->
+                    <div id="radarChartContainer" style="position: relative; height:300px; width:100%">
+                         <canvas id="clusterRadarChart"></canvas>
+                    </div>
+                     <p class="text-center mt-2">Cluster Profile Radar Chart (Placeholder)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

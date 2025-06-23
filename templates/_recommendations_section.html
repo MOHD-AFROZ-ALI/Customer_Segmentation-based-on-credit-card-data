@@ -1,0 +1,43 @@
+{% if recommendations and recommendations|length > 0 %}
+<section id="recommendations-section" class="my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h2 class="h5 mb-0">Business Insights & Recommendations</h2>
+        </div>
+        <div class="card-body">
+            {% for rec in recommendations %}
+            <div class="recommendation-item mb-3">
+                <h5>{{ rec.cluster_name }}</h5>
+                <p>{{ rec.description }}</p>
+                <h6>Key Characteristics:</h6>
+                <ul>
+                    {% for char in rec.characteristics %}
+                    <li>{{ char }}</li>
+                    {% endfor %}
+                </ul>
+                <h6>Suggested Actions:</h6>
+                <ul>
+                    {% for action in rec.actions %}
+                    <li>{{ action }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% if not loop.last %}<hr>{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else %}
+{% if results_table %} {# Only show this placeholder if there are results, but no recommendations yet #}
+<section id="recommendations-section" class="my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h2 class="h5 mb-0">Business Insights & Recommendations</h2>
+        </div>
+        <div class="card-body">
+            <p class="text-muted">Recommendations will be generated based on cluster analysis.</p>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endif %}

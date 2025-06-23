@@ -1,0 +1,120 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5; /* Light grey background */
+    color: #333;
+    padding-top: 70px; /* Adjusted for fixed navbar height */
+}
+
+.container {
+    max-width: 1200px; /* Wider container for dashboard layout */
+}
+
+.card {
+    border: none; /* Remove default card border */
+    border-radius: 0.5rem; /* Softer corners */
+    margin-bottom: 1.5rem; /* More spacing between cards */
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,.075); /* Subtle border for header */
+    font-weight: 500;
+}
+
+.card-header.bg-primary { background-color: #007bff !important; }
+.card-header.bg-secondary { background-color: #6c757d !important; }
+.card-header.bg-success { background-color: #28a745 !important; }
+.card-header.bg-info { background-color: #17a2b8 !important; }
+.card-header.bg-warning { background-color: #ffc107 !important; color: #212529 !important; } /* Ensure text is dark on light warning */
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-warning {
+    color: #212529; /* Dark text for better contrast on yellow */
+}
+
+.table-responsive {
+    margin-top: 1rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+.table thead th {
+    background-color: #f8f9fa; /* Light header for tables */
+}
+
+.results-table table {
+    font-size: 0.85rem; /* Slightly smaller font for dense tables */
+}
+
+.flash-messages .alert {
+    border-radius: 0.25rem;
+}
+
+.custom-file-label::after {
+    content: "Browse"; /* More standard text for file input */
+}
+
+.chart-container {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+#upload-section .card-body, #training-section .card-body {
+    padding: 1.5rem;
+}
+
+.recommendation-item h5 {
+    color: #007bff;
+}
+.recommendation-item h6 {
+    font-size: 0.9rem;
+    color: #495057;
+    margin-top: 0.75rem;
+    font-weight: bold;
+}
+.recommendation-item ul {
+    padding-left: 20px;
+    font-size: 0.85rem;
+}
+
+.footer {
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px; /* Adjust for smaller navbar */
+    }
+    .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Spinner for upload button */
+.btn .spinner-border {
+    margin-right: 5px;
+}
+
+/* Ensure fixed top navbar doesn't overlap content */
+body {
+  padding-top: 4.5rem; /* Height of the navbar */
+}
+.navbar.fixed-top {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}

@@ -1,0 +1,13 @@
+<section id="training-section" class="my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h2 class="h5 mb-0">Model Training</h2>
+        </div>
+        <div class="card-body">
+            <p>Re-train the segmentation models using the dataset currently in <code>customer_data/</code>. This process may take a few moments.</p>
+            <form method="post" action="{{ url_for('run_training_pipeline_route') }}">
+                <button type="submit" class="btn btn-warning btn-block">Run Training Pipeline</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+{% if insights %}
+<section id="insights-section" class="my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h2 class="h5 mb-0">Summary Insights</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Total Customers Processed:</strong> <span class="badge badge-primary">{{ insights.total_customers }}</span></p>
+                    <p><strong>Number of Clusters Found:</strong> <span class="badge badge-info">{{ insights.num_clusters_found }}</span></p>
+                </div>
+                <div class="col-md-6">
+                    {% if insights.cluster_distribution_table %}
+                        <h5>Cluster Distribution:</h5>
+                        <ul class="list-group">
+                        {% for cluster, count in insights.cluster_distribution_table.items() %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Cluster {{ cluster }}
+                                <span class="badge badge-secondary badge-pill">{{ count }} customers</span>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if insights.cluster_feature_means and insights.cluster_feature_means is mapping and insights.cluster_feature_means|length > 0 %}
+                <h5 class="mt-4">Mean Feature Values per Cluster (Sample):</h5>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Cluster</th>
+                                {% for feature_name in insights.cluster_feature_means.values()|first|list %}
+                                    <th>{{ feature_name }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for cluster_id, features in insights.cluster_feature_means.items() %}
+                            <tr>
+                                <td class="font-weight-bold">{{ cluster_id }}</td>
+                                {% for feature_name in insights.cluster_feature_means.values()|first|list %}
+                                    <td>{{ features[feature_name] if features[feature_name] is not none else 'N/A' }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="mt-3 text-muted">Detailed feature means per cluster are not available for this prediction.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}
