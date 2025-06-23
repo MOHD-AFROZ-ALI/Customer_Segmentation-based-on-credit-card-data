@@ -351,14 +351,13 @@ def upload_file():
         logging.error(f"Unexpected error during upload/prediction: {e}\n{traceback.format_exc()}")
         return jsonify({'success': False, 'error': f"An unexpected server error occurred: {str(e)}"}), 500
     finally:
-        # Clean up the originally uploaded file if it exists, as prediction pipeline might use a copy or its own managed file
-        if uploaded_csv_path.exists():
+        # Clean up the originally uploaded file if it exists
+        if temp_uploaded_csv_path and temp_uploaded_csv_path.exists(): # Check if path was defined and exists
              try:
-                 os.remove(uploaded_csv_path)
-                 logging.info(f"Cleaned up uploaded file: {uploaded_csv_path}")
+                 os.remove(temp_uploaded_csv_path)
+                 logging.info(f"Cleaned up temporary uploaded file: {temp_uploaded_csv_path}")
              except Exception as e_clean:
-                 logging.error(f"Error cleaning up file {uploaded_csv_path}: {e_clean}")
-# Removed 'else' block for 'if file and file.filename.endswith('.csv')' as it's handled earlier by returning jsonify
+                 logging.error(f"Error cleaning up temporary file {temp_uploaded_csv_path}: {e_clean}")
 
 @app.route('/download_prediction/<filename>')
 def download_prediction(filename: str):
